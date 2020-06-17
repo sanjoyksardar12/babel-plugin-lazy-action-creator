@@ -67,3 +67,7 @@ and add .babelrc
  You can disable this rule by adding /* babel lazy-action-creator: "disable" */
   - for whole file add it in global scope
   - for a particular action add this comment before use of the action
+  
+  
+ #Examples
+ https://github.com/sanjoyksardar12/babel-plugin-lazy-action-creator-examples
