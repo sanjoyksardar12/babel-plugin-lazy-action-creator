@@ -69,5 +69,5 @@ and add .babelrc
   - for a particular action add this comment before use of the action
   
   
- #Examples
+ # Examples
  https://github.com/sanjoyksardar12/babel-plugin-lazy-action-creator-examples
