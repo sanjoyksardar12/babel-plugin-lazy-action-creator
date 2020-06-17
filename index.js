@@ -11,11 +11,9 @@ exports.default = function ({ types: t }) {
         if (path.node.callee.name !== "connect") {
           return;
         }
-        if (isDisableFile(path)) {
+        if (isDisableFile(path.findParent(p=>p.isProgram()))) {
           return;
         }
-        console.log("a");
-        console.log("----> ",path.hub.file.opts.filename);
         if(path.hub.file.opts.filename.includes("node_module")){
           return;
         }
