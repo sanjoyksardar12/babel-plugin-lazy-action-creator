@@ -1,4 +1,5 @@
 # babel-plugin-lazy-action-creator
+   Lazy load actions defined in mapDispatchToProps
 
 # problem:
 We used to define mapDispatchToProps
@@ -12,7 +13,7 @@ const mapdispatchToProps = {
 ```
 or
 ```
-const mapdispatchToProps= (dispatch) => {
+const mapDispatchToProps= (dispatch) => {
   return {
     multiplication2: (a, b) => {
       return dispatch(multiplication(a, b))
@@ -23,13 +24,13 @@ const mapdispatchToProps= (dispatch) => {
 }
 ```
 
-then in the bundle all the code related to these action will attached into bundle.
+then after bundle all the code related to these action will attached into bundle.
 
-But the action definition may not required for the first load time, it may required for later upon use interaction.
+But the action definition may not required for the first load time, it may required for later on use interaction.
 
-so we can do lazy laod this function when required, then systax will be like
+so we can do lazy load these actions when required, then systax will be like
 ```
-const mapdispatchToProps= (dispatch) => {
+const mapDispatchToProps= (dispatch) => {
   return {
     multiplication: (a, b) => import("./action-multiplication.js")
       .then(({default: multiplication})=>{
@@ -64,7 +65,7 @@ and add .babelrc
 
 
 # options
- You can disable this rule by adding /* babel lazy-action-creator: "disable" */
+ You can disable this rule by adding  **/\*babel-lazy-action-creator: "disable"\*\/**
   - for whole file add it in global scope
   - for a particular action add this comment before use of the action
   
