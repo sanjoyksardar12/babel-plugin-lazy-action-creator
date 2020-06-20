@@ -23,7 +23,6 @@ exports.default = function ({ types: t }) {
         }
 
         let isMapDispatchToPropsObject = false;
-        debugger
         let {
           returnStatement,
           aMDTPDecl,
