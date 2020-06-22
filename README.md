@@ -9,7 +9,9 @@ const mapdispatchToProps = {
   multiplication,
   addition,
   subtraction,
-}
+} 
+
+asdasd
 ```
 or
 ```
