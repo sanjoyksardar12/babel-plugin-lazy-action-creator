@@ -45,6 +45,9 @@ const mapDispatchToProps= (dispatch) => {
     subtraction: (arg1, arg2) =>import("./action-subtraction.js")
       .then(({default: subtraction})=>dispatch(subtraction(arg1, arg2)))
   }
+  
+  
+  
 }
 ```
 Now if we bundle this, then we will get four chunks,
@@ -57,7 +60,7 @@ Now if we bundle this, then we will get four chunks,
 ```
   npm i babel-plugin-lazy-action-creator
 ```
-and add .babelrc
+and add  .babelrc
 ```
 "plugins": [
   "babel-plugin-lazy-action-creator",
